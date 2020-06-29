@@ -87,6 +87,7 @@ class NewVisitorTest(LiveServerTestCase):
         edith_list_url = self.browser.current_url
         self.assertRegex(edith_list_url, '/lists/.+')
 
+
         # Now a new user, Francis, comes along to the side
 
         ## We use a new browser session to make sure that no information
