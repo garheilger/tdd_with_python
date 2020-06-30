@@ -1,5 +1,5 @@
 """
- Unit tests module
+ Unittest module
 """
 from django.urls import resolve
 from django.test import TestCase
