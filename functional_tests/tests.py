@@ -9,6 +9,7 @@ from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.keys import Keys
 
 MAX_WAIT = 10
+
 class NewVisitorTest(LiveServerTestCase):
     """
         Class to test new web page visitor activities
@@ -64,14 +65,8 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox.send_keys(Keys.ENTER)
 
         # The page updates again, and now shows both items on her list
-        self.wait_for_row_in_list_table('1: Buy peacock feathers')
         self.wait_for_row_in_list_table('2: Use peacock feathers to make a fly')
-
-        # Edith wonders whether the site will remember her list. The she sees that the
-        # site has generated a unique URL for her -- there is one explanatory text to that effect.
-        self.fail('Finish the test!')
-
-        # She visits that URL - her to-do list is still there
+        self.wait_for_row_in_list_table('1: Buy peacock feathers')
 
         # Satisfied, she goes back to sleep
     
